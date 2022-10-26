@@ -27,6 +27,7 @@ public class Stack{
        }
        
        System.out.println(item + " has been added to the Stack");
+       System.out.println("");
     }
     
     public String peek()
@@ -49,22 +50,29 @@ public class Stack{
 
     
     public static void main(String[]ags){
-        Stack test = new Stack();
+        Stack stack = new Stack();
         
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter a name: ");
         String name1 = userInput.nextLine();
+        System.out.print("");
         
-        
-        test.push(name1);
+        stack.push(name1);
         
         System.out.println("Please enter a name: ");
         String name2 = userInput.nextLine();
+        System.out.println("");
+        stack.push(name2);
         
-        test.push(name2);
-        System.out.println("The top of the stack is: " + test.peek());
-        System.out.println("Beneath the top of the stack is: " + test.peek2());
-        test.pop();
-        System.out.println(test.peek());
+        System.out.println("Peek used on stack returns: " + stack.peek());
+        System.out.println("");
+        System.out.println("Peek2 method used on stack returns: " + stack.peek2());
+        System.out.println("");
+        stack.pop();
+        System.out.println("*Pop method used on stack*");
+        System.out.println("");
+        System.out.println("Peek used on stack returns: " + stack.peek());
+        System.out.println("");
+        
     }
 }
